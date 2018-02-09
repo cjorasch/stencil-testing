@@ -6,34 +6,42 @@
 
 import '@stencil/router';
 
-import {
-  MatchResults,
-} from '@stencil/router';
+import '@ionic/core';
 
-import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+}
+
+
+
+import {
+  AppBody as AppBody
+} from './components/app/app-body/app-body';
+
+declare global {
+  interface HTMLAppBodyElement extends AppBody, HTMLStencilElement {
+  }
+  var HTMLAppBodyElement: {
+    prototype: HTMLAppBodyElement;
+    new (): HTMLAppBodyElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "app-body": HTMLAppBodyElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "app-body": HTMLAppBodyElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      "app-body": JSXElements.AppBodyAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface AppBodyAttributes extends HTMLAttributes {
       
     }
   }
@@ -41,62 +49,300 @@ declare global {
 
 
 import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
+  ImportsA as ImportsA
+} from './tests/imports/imports-a/imports-a';
 
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
+  interface HTMLImportsAElement extends ImportsA, HTMLStencilElement {
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLImportsAElement: {
+    prototype: HTMLImportsAElement;
+    new (): HTMLImportsAElement;
   };
   interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "imports-a": HTMLImportsAElement;
   }
   interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "imports-a": HTMLImportsAElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
+      "imports-a": JSXElements.ImportsAAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
+    export interface ImportsAAttributes extends HTMLAttributes {
       
-        match?: MatchResults
     }
   }
 }
 
 
 import {
-  MyApp as MyApp
-} from './components/my-app/my-app';
+  ImportsB as ImportsB
+} from './tests/imports/imports-b/imports-b';
 
 declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLElement {
+  interface HTMLImportsBElement extends ImportsB, HTMLStencilElement {
   }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
+  var HTMLImportsBElement: {
+    prototype: HTMLImportsBElement;
+    new (): HTMLImportsBElement;
   };
   interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    "imports-b": HTMLImportsBElement;
   }
   interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    "imports-b": HTMLImportsBElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
+      "imports-b": JSXElements.ImportsBAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
+    export interface ImportsBAttributes extends HTMLAttributes {
       
     }
   }
 }
 
+
+import {
+  ImportsC as ImportsC
+} from './tests/imports/imports-c/imports-c';
+
+declare global {
+  interface HTMLImportsCElement extends ImportsC, HTMLStencilElement {
+  }
+  var HTMLImportsCElement: {
+    prototype: HTMLImportsCElement;
+    new (): HTMLImportsCElement;
+  };
+  interface HTMLElementTagNameMap {
+    "imports-c": HTMLImportsCElement;
+  }
+  interface ElementTagNameMap {
+    "imports-c": HTMLImportsCElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "imports-c": JSXElements.ImportsCAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ImportsCAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  ImportsCircular as ImportsCircular
+} from './tests/imports/imports-circular/imports-circular';
+
+declare global {
+  interface HTMLImportsCircularElement extends ImportsCircular, HTMLStencilElement {
+  }
+  var HTMLImportsCircularElement: {
+    prototype: HTMLImportsCircularElement;
+    new (): HTMLImportsCircularElement;
+  };
+  interface HTMLElementTagNameMap {
+    "imports-circular": HTMLImportsCircularElement;
+  }
+  interface ElementTagNameMap {
+    "imports-circular": HTMLImportsCircularElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "imports-circular": JSXElements.ImportsCircularAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ImportsCircularAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  ImportsIndex as ImportsIndex
+} from './tests/imports/imports-index/imports-index';
+
+declare global {
+  interface HTMLImportsIndexElement extends ImportsIndex, HTMLStencilElement {
+  }
+  var HTMLImportsIndexElement: {
+    prototype: HTMLImportsIndexElement;
+    new (): HTMLImportsIndexElement;
+  };
+  interface HTMLElementTagNameMap {
+    "imports-index": HTMLImportsIndexElement;
+  }
+  interface ElementTagNameMap {
+    "imports-index": HTMLImportsIndexElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "imports-index": JSXElements.ImportsIndexAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ImportsIndexAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  ImportsIndex2 as ImportsIndex2
+} from './tests/imports/imports-index2/imports-index2';
+
+declare global {
+  interface HTMLImportsIndex2Element extends ImportsIndex2, HTMLStencilElement {
+  }
+  var HTMLImportsIndex2Element: {
+    prototype: HTMLImportsIndex2Element;
+    new (): HTMLImportsIndex2Element;
+  };
+  interface HTMLElementTagNameMap {
+    "imports-index2": HTMLImportsIndex2Element;
+  }
+  interface ElementTagNameMap {
+    "imports-index2": HTMLImportsIndex2Element;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "imports-index2": JSXElements.ImportsIndex2Attributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ImportsIndex2Attributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  Comp10Prop as Comp10prop
+} from './tests/quantity/comp-10prop/comp-10prop';
+
+declare global {
+  interface HTMLComp10propElement extends Comp10prop, HTMLStencilElement {
+  }
+  var HTMLComp10propElement: {
+    prototype: HTMLComp10propElement;
+    new (): HTMLComp10propElement;
+  };
+  interface HTMLElementTagNameMap {
+    "comp-10prop": HTMLComp10propElement;
+  }
+  interface ElementTagNameMap {
+    "comp-10prop": HTMLComp10propElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "comp-10prop": JSXElements.Comp10propAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface Comp10propAttributes extends HTMLAttributes {
+      property1?: string;
+      property10?: string;
+      property2?: string;
+      property3?: string;
+      property4?: string;
+      property5?: string;
+      property6?: string;
+      property7?: string;
+      property8?: string;
+      property9?: string;
+    }
+  }
+}
+
+
+import {
+  Comp20Prop as Comp20prop
+} from './tests/quantity/comp-20prop/comp-20prop';
+
+declare global {
+  interface HTMLComp20propElement extends Comp20prop, HTMLStencilElement {
+  }
+  var HTMLComp20propElement: {
+    prototype: HTMLComp20propElement;
+    new (): HTMLComp20propElement;
+  };
+  interface HTMLElementTagNameMap {
+    "comp-20prop": HTMLComp20propElement;
+  }
+  interface ElementTagNameMap {
+    "comp-20prop": HTMLComp20propElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "comp-20prop": JSXElements.Comp20propAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface Comp20propAttributes extends HTMLAttributes {
+      property1?: string;
+      property10?: string;
+      property11?: string;
+      property12?: string;
+      property13?: string;
+      property14?: string;
+      property15?: string;
+      property16?: string;
+      property17?: string;
+      property18?: string;
+      property19?: string;
+      property2?: string;
+      property20?: string;
+      property3?: string;
+      property4?: string;
+      property5?: string;
+      property6?: string;
+      property7?: string;
+      property8?: string;
+      property9?: string;
+    }
+  }
+}
+
+
+import {
+  CompNoop as CompNoop
+} from './tests/quantity/comp-noop/comp-noop';
+
+declare global {
+  interface HTMLCompNoopElement extends CompNoop, HTMLStencilElement {
+  }
+  var HTMLCompNoopElement: {
+    prototype: HTMLCompNoopElement;
+    new (): HTMLCompNoopElement;
+  };
+  interface HTMLElementTagNameMap {
+    "comp-noop": HTMLCompNoopElement;
+  }
+  interface ElementTagNameMap {
+    "comp-noop": HTMLCompNoopElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "comp-noop": JSXElements.CompNoopAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface CompNoopAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+declare global { namespace JSX { interface StencilJSX {} } }
