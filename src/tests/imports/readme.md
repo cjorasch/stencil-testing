@@ -27,6 +27,7 @@ Issues
 - async/await still gets lots of duplicate code
 - how to import socket.io client
 - ability to read from shared directory outside of src
+- import of shared code must use individual files vs. index files
 
 TODO:
 - how to avoid very large number of chunk permutations?
